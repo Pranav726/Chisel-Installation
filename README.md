@@ -23,9 +23,9 @@ Project Structure
         ├── counter.scala   # Chisel source file
         ├── Counter.v       # Generated Verilog file
         ├── tb_counter.v    # Verilog testbench (optional)
-        └── README.md
+        └── README.md       # optional
 
         
 Conclusion
 -----------------
-This project successfully demonstrates the use of Chisel to design a digital counter and generate synthesizable Verilog code. The same flow can be extended to more complex modules such as FSMs, processors, and SoC components.
+This project successfully demonstrates the use of Chisel to design a digital counter and generate synthesizable Verilog code. The same flow can be extended to more complex modules such as FSMs, processors, and SoC components.The chisel installation differs from ystem to sytem as per the dependencies you already installed.
