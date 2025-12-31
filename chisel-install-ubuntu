@@ -1,0 +1,44 @@
+Install Java
+-------------------
+sudo apt update
+sudo apt install openjdk-17-jdk -y
+java -version
+
+  
+Install Scala CLI (MAIN TOOL)
+--------------------------------
+curl -sSL https://scala-cli.virtuslab.org/get | sh
+sudo mv scala-cli /usr/local/bin/
+scala-cli version
+
+
+Install sbt
+--------------
+sudo apt install sbt -y
+sbt sbtVersion
+
+
+Create a Chisel project directory
+------------------------------------
+mkdir -p ~/chisel-projects
+cd ~/chisel-projects
+
+Create a Chisel file
+------------------------
+nano counter.scala
+
+Chisel dependencies (INSIDE THE FILE)
+---------------------------------------
+//> using scala 2.13.18
+//> using dep org.chipsalliance::chisel:7.6.0
+//> using plugin org.chipsalliance:::chisel-plugin:7.6.0
+
+Run Chisel (GENERATE RTL)
+--------------------------
+scala-cli run counter.scala --scala 2.13.18 --jvm temurin:17
+
+
+Save generated Verilog/SystemVerilog to file
+----------------------------------------------
+scala-cli run counter.scala --scala 2.13.18 --jvm temurin:17 > Counter.v
+
