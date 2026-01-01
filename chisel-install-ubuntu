@@ -7,7 +7,10 @@ java -version
   
 Install Scala CLI (MAIN TOOL)
 --------------------------------
+mkdir rootfs
+cd rootfs
 curl -sSL https://scala-cli.virtuslab.org/get | sh
+source ~/.profile
 sudo mv scala-cli /usr/local/bin/
 scala-cli version
 
